@@ -18,3 +18,11 @@ FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS01\MSSQL\Ba
 WITH NORECOVERY; 
 
 ```
+
+```
+-- 2. Restore DIFFERENTIAL backup (if you created one) 
+RESTORE DATABASE TrainingDB  
+FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS01\MSSQL\Backup\TrainingDB_Diff.bak' 
+WITH NORECOVERY;
+```
+
