@@ -26,3 +26,10 @@ FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS01\MSSQL\Ba
 WITH NORECOVERY;
 ```
 
+```
+-- 3. Restore TRANSACTION LOG backup (if you created one) 
+RESTORE LOG TrainingDB  
+FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS01\MSSQL\Backup\TrainingDB_Log.trn' 
+WITH RECOVERY; 
+
+```
