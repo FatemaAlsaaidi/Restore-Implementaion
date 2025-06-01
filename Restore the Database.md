@@ -33,3 +33,12 @@ FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS01\MSSQL\Ba
 WITH RECOVERY; 
 
 ```
+
+### Step 3: Verify the Restored Data 
+```
+USE TrainingDB; 
+SELECT * FROM Students; 
+```
+
+Output:
+![Image of Students Table with Data](img/TestRestoreProcess.Jpg)
