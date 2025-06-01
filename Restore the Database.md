@@ -59,3 +59,12 @@ table of differences between restoring a full backup and a copy-only backup:
 |----------------|----------------|
 |1. Full Backup | A complete backup of the database, including all data and objects. Restoring this type replaces the entire database with the state captured at the time of the backup.|
 |2. Copy-Only Backup | A special type of backup that does not affect the sequence of regular backups. Restoring a copy-only backup does not require previous backups to be restored first.|
+
+3.  What happens if you use WITH RECOVERY in the middle of a restore chain?
+	
+	- Ends the restore sequence
+
+	- Makes the database operational
+
+	- Prevents further restores
+	
