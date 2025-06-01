@@ -44,3 +44,9 @@ Output:
 ![Image of Students Table with Data](img/TestRestoreProcess.Jpg)
 
 ###### Note : studen data including the last one you added before the transaction log backup
+
+### Reflection Questions:
+1. What would happen if you skipped the differential backup step?
+- If skipped the differential backup step, the database would be restored to the state of the last full backup, losing any changes made after that full backup and before the differential backup.
+- This means any data added or modified after the full backup would not be present in the restored database.
+- Thus, would only have the data from the full backup, which may not include the most recent transactions or changes made to the database.
