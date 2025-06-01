@@ -67,4 +67,13 @@ table of differences between restoring a full backup and a copy-only backup:
 	- Makes the database operational
 
 	- Prevents further restores
-	
+
+4. Which backup types are optional and which are mandatory for full recovery ?
+
+1. Mandatory:
+   - Full Backup: Essential for restoring the database to a specific point in time.
+   - Transaction Log Backup: Necessary for point-in-time recovery and to capture all transactions since the last full backup.
+2. Optional:
+   - Differential Backup: Useful for reducing restore time and capturing changes since the last full backup, but not required for basic recovery.
+   - Copy-Only Backup: Not required for recovery but useful for specific scenarios where you want to take a backup without affecting the backup chain.
+
