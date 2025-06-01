@@ -50,3 +50,12 @@ Output:
 - If skipped the differential backup step, the database would be restored to the state of the last full backup, losing any changes made after that full backup and before the differential backup.
 - This means any data added or modified after the full backup would not be present in the restored database.
 - Thus, would only have the data from the full backup, which may not include the most recent transactions or changes made to the database.
+
+2. What’s the difference between restoring a full vs. copy-only backup?
+
+table of differences between restoring a full backup and a copy-only backup:
+
+|Restore Type | Description|
+|----------------|----------------|
+|1. Full Backup | A complete backup of the database, including all data and objects. Restoring this type replaces the entire database with the state captured at the time of the backup.|
+|2. Copy-Only Backup | A special type of backup that does not affect the sequence of regular backups. Restoring a copy-only backup does not require previous backups to be restored first.|
