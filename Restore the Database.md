@@ -77,3 +77,17 @@ table of differences between restoring a full backup and a copy-only backup:
    - Differential Backup: Useful for reducing restore time and capturing changes since the last full backup, but not required for basic recovery.
    - Copy-Only Backup: Not required for recovery but useful for specific scenarios where you want to take a backup without affecting the backup chain.
 
+5. Show that you can restore a SQL Server database using a backup chain, and explain the logic of 
+the steps you followed.
+
+<ins> what is a backup chain?
+
+- A backup chain is a sequence of backups that are related to each other, typically consisting of a full backup, followed by one or more differential backups, and possibly transaction log backups. Each type of backup serves a specific purpose in the recovery process, allowing for efficient restoration of the database to a specific point in time while minimizing data loss.
+
+<ins> To restore a SQL Server database using a backup chain, you follow these steps:
+
+1. **Drop the Current Database**: Simulate a system failure by dropping the existing database.
+2. **Restore Full Backup**: Start by restoring the full backup, which contains the complete state of the database at the time of the backup.
+3. **Restore Differential Backup (if available)**: If a differential backup exists, restore it next to capture changes made since the last full backup.
+4. **Restore Transaction Log Backup (if available)**: Finally, restore the transaction log backup to apply all transactions that occurred after the last full or differential backup.
+5. **Verify the Restored Data**: Check the database to ensure that it reflects the expected state, including all data and transactions up to the last log backup.
