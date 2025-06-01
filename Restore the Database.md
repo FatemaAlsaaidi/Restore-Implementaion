@@ -9,3 +9,12 @@ back to the most recent state — using your backup files only.
 ```sql
 drop database TrainingDB;
 ```
+
+### Step 2: Restore from Your Backups
+```sql
+-- 1. Restore FULL backup 
+RESTORE DATABASE TrainingDB  
+FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS01\MSSQL\Backup\TrainingDB_Full.bak' 
+WITH NORECOVERY; 
+
+```
