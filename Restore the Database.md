@@ -42,3 +42,5 @@ SELECT * FROM Students;
 
 Output:
 ![Image of Students Table with Data](img/TestRestoreProcess.Jpg)
+
+###### Note : studen data including the last one you added before the transaction log backup
